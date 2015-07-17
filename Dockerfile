@@ -6,10 +6,6 @@ RUN apt-get update \
 RUN locale-gen "en_US.UTF-8" \
     && dpkg-reconfigure locales
 
-VOLUME /opt/buildroot/output/build
-VOLUME /opt/buildroot/scripts
-VOLUME /root/.buildroot-ccache
-
 ADD http://buildroot.uclibc.org/downloads/buildroot-2015.05.tar.gz /opt/
 
 RUN cd /opt \
