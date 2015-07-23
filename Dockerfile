@@ -30,6 +30,7 @@ RUN apt-get update \
                           locales \
                           make \
                           mercurial \
+                          nano \
                           patch \
                           perl \
                           python \
