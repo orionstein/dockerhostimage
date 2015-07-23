@@ -50,4 +50,10 @@ ADD http://buildroot.uclibc.org/downloads/buildroot-2015.05.tar.gz /opt/
 
 RUN cd /opt \
     && tar -xvf buildroot-2015.05.tar.gz \
-    && mv buildroot-2015.05 buildroot
+    && mv buildroot-2015.05 buildroot \
+    && rm buildroot-2015.05.tar.gz
+
+RUN useradd buildroot -m -s /bin/bash \
+    && chown -R buildroot:buildroot /opt/buildroot
+
+USER buildroot
