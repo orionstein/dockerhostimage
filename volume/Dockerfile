@@ -5,9 +5,10 @@ WORKDIR /opt/buildroot
 USER root
 
 RUN mkdir -p output \
+    && mkdir -p dl \
     && chown -R buildroot:buildroot /opt/buildroot \
-    && chown -R buildroot:buildroot /opt/buildroot/* \
-    && ls -la && ls -la output
+    && chown -R buildroot:buildroot /opt/buildroot/output \
+    && chown -R buildroot:buildroot /opt/buildroot/dl
 
 VOLUME /opt/buildroot/output
 
