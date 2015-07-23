@@ -56,4 +56,3 @@ RUN cd /opt \
 RUN useradd buildroot -m -s /bin/bash \
     && chown -R buildroot:buildroot /opt/buildroot
 
-USER buildroot
